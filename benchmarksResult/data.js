@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1688418007061,
+  "lastUpdate": 1688418443960,
   "repoUrl": "https://github.com/8auu/discordeno",
   "entries": {
     "Benchmark": [
@@ -2451,6 +2451,107 @@ window.BENCHMARK_DATA = {
             "name": "Snakelize 1 event",
             "value": 6209,
             "range": "±0.27%",
+            "unit": "ops/sec",
+            "extra": "95 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "logancross02@me.com",
+            "name": "8auu",
+            "username": "8auu"
+          },
+          "committer": {
+            "email": "logancross02@me.com",
+            "name": "8auu",
+            "username": "8auu"
+          },
+          "distinct": true,
+          "id": "b7bf6275735c29c02f684acb707e02f27a8c23d5",
+          "message": "fix: Fixed an issue which would cause the 'INVITE_DELETE' event to be passed into 'INVITE_CREATE'.",
+          "timestamp": "2023-07-03T22:03:56+01:00",
+          "tree_id": "8aef57b07be7b75d3d7426423111446fd2aeba18",
+          "url": "https://github.com/8auu/discordeno/commit/b7bf6275735c29c02f684acb707e02f27a8c23d5"
+        },
+        "date": 1688418441953,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "[transformer] message cache check RSS",
+            "value": 111.92,
+            "range": "±1%",
+            "unit": "MB",
+            "extra": "3 samples"
+          },
+          {
+            "name": "[transformer] message cache check Heap Used",
+            "value": 118.47,
+            "range": "±1%",
+            "unit": "MB",
+            "extra": "3 samples"
+          },
+          {
+            "name": "[transformer] message cache check Heap Total",
+            "value": 107.14,
+            "range": "±1%",
+            "unit": "MB",
+            "extra": "3 samples"
+          },
+          {
+            "name": "[transformer] old message cache check Heap Used",
+            "value": 101.32,
+            "range": "±1%",
+            "unit": "MB",
+            "extra": "3 samples"
+          },
+          {
+            "name": "[transformer] old message cache check Heap Total",
+            "value": 78.05,
+            "range": "±1%",
+            "unit": "MB",
+            "extra": "3 samples"
+          },
+          {
+            "name": "[Cache Plugin] RSS",
+            "value": 0.61,
+            "range": "±2.8%",
+            "unit": "MB",
+            "extra": "3 samples"
+          },
+          {
+            "name": "[Cache Plugin] Heap Used",
+            "value": 10.65,
+            "range": "±1.44%",
+            "unit": "MB",
+            "extra": "3 samples"
+          },
+          {
+            "name": "[Cache Plugin] Heap Total",
+            "value": 0,
+            "range": "±0%",
+            "unit": "MB",
+            "extra": "3 samples"
+          },
+          {
+            "name": "rest.simplifyUrl",
+            "value": 212577,
+            "range": "±0.31%",
+            "unit": "ops/sec",
+            "extra": "95 samples"
+          },
+          {
+            "name": "Camelize 1 event",
+            "value": 5997,
+            "range": "±0.32%",
+            "unit": "ops/sec",
+            "extra": "94 samples"
+          },
+          {
+            "name": "Snakelize 1 event",
+            "value": 6064,
+            "range": "±0.24%",
             "unit": "ops/sec",
             "extra": "95 samples"
           }
