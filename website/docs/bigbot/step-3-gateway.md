@@ -149,7 +149,7 @@ GATEWAY.tellWorkerToIdentify = async function (workerId, shardId, bucketId) {
     method: 'POST',
     headers: {
       authorization: process.env.AUTHORIZATION,
-      "Content-type": "application/json",
+      'Content-type': 'application/json',
     },
     body: JSON.stringify({ type: 'IDENTIFY_SHARD', shardId }),
   })
@@ -537,7 +537,14 @@ Take the time to improve more events like this for you bot. For example, if you 
 
 We should take the time here to implement a small queue where we can store events in the off chance that our event listener was not able to receive the event. For example, if you are restarting the bot process for a split second, you might lose some events. To avoid this issue, we should build an event queue which will make sure we don't lose them.
 
-RabbitMQ setup guide here.
+There are a number of different solutions, but for this guide we will be using RabbitMQ. It is a great tool which allows you to send messages (in this case, gateway events) to a message broker, once a message has been added to the queue you are able to pull them off in a round robin fashion. For large bots this allows you to scale in a much easier way, by simply spawning a new bot process to pull events off of the queue.
+
+#### 1. installation
+
+RabbitMQ offers a [cloud based solutioin](https://www.cloudamqp.com/plans.html), but this can get quite costly. For this guide we'll be self hosting it with Docker to save those sweet sweet bucks.
+
+1. install [docker](https://docs.docker.com/desktop/install/windows-install/)
+2. `docker run -p 127.0.0.1:15672:15672 -p 127.0.0.1:5672:5672 --name rabbitmq -d --restart=always rabbitmq`
 
 ### Resharding
 
